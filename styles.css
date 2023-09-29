@@ -6,29 +6,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("fonts/pt-sans-bold.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 400;
-  src: url("fonts/pt-sans-italic.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 700;
-  src: url("fonts/pt-sans-bold-italic.woff2") format("woff2");
-  font-display: swap;
-}
-
 /* PT Sans Narrow */
 @font-face {
   font-family: "PT Sans Narrow";
@@ -38,7 +15,33 @@
   font-display: swap;
 }
 
-html {
+/*Полужирный*/
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/pt-sans-bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+/*наклонный*/
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("fonts/pt-sans-italic.woff2") format("woff2");
+}
+
+/*Полужирный наклонный*/
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url("fonts/pt-sans-bold-italic.woff2") format("woff2");
+  font-display: swap;
+}
+
+htmhl {
 height: 100%;
   /*Фишка -вносим эти 2 строки только для того, чтобы видеть С каким элементом сейчас рабоатем
    outline: 5px solid red;
@@ -56,7 +59,13 @@ body {
     line-height: 24px;
     color: #242424;
     background-color: #fbf7f4;
-  
+  }
+
+  /* Light Для светлой кнопки 
+  переключения вида товаров добавим светлый фон и тёмный текст.*/
+.button-light {
+  color: #242424;
+  background-color: #FFFFFF;
 }
 
 .button {
@@ -76,14 +85,13 @@ body {
     color: #FFFFFF;
     background: #000000;
   }
+  /*color и background всегда идут в паре*/
   
   .navigation {
     display: flex;
     width: 940px;
     margin: 0 auto;
-    outline: 5px solid rgba(255, 99, 78, 0.5);
-    outline-offset: -5px;
-  }
+       }
 
   .navigation-list {
     margin: 0;
@@ -118,6 +126,7 @@ body {
 flex-grow: 1;
   }
 
+  /*фоновое изображение для главной страницы.*/
   .main-index {
     color: #FFFFFF;
     background-color: #000000;
@@ -126,6 +135,8 @@ flex-grow: 1;
     background-repeat: no-repeat;
   }
   
+  /*Добавим рябящий фон из макета,
+  фоновый цвет и контрастный цвет текста для внутренних страниц.*/
   .main-inner {
     color:#242424;
     background-color: #f7f7f4;
@@ -164,7 +175,7 @@ flex-grow: 1;
     text-transform: uppercase;
   }
   
-  /* Index columns для общего паттерна на 2 секции*/
+  /* обертка index-columns для общего паттерна на 2 секции*/
   .index-columns {
     display: flex;
     justify-content: space-between;
@@ -234,7 +245,9 @@ width: 390px;
     color: #AF7842;
   }
   
-  /* Phone */
+  /*В блоке «Контакты» обязательно указываем цвет текста для телефона. Адрес размечен с помощью тега <address>, 
+  поэтому нужно указать ему font-style: normal;. Дело в том, что у тега <address> 
+  для этого CSS-свойства есть браузерные стили по умолчанию, которые нам нужно переопределить.*/
   .contacts-phone {
     font-size: 24px;
     line-height: 29px;
@@ -267,6 +280,8 @@ width: 430px;
     text-transform: uppercase;
   }
   
+  /*--Футер. Добавим фоновый цвет, фоновое изображение, 
+  вет текста и текстовые параметры для всего футера.*/
   .page-footer {
     font-size: 14px;
     font-weight: 700;
@@ -276,6 +291,7 @@ width: 430px;
     background-repeat: repeat;
   }
 
+  /*Зададим ссылкам цвет и размер.*/
    .page-footer a {
     color: #FFFFFF;
   }
@@ -284,6 +300,7 @@ width: 430px;
     font-size: 14px;
     color: #DBB590;
   }
+
   .page-footer-title {
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 20px;
@@ -346,7 +363,8 @@ width: 430px;
   text-transform: uppercase;
 }
 
-/*Breadcrumbs*/
+/*Breadcrumbs стили для хлебных крошек. 
+Для ссылок начнём наследование цвета текста от родителя*/
 .breadcrumbs {
   color:#242424;
 }
@@ -365,8 +383,73 @@ width: 430px;
   margin-right: 20px;
 }
 
+/* Title */
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #242424;
+  text-transform: uppercase;
+}
+
+/* Label */
+.control-label {
+  font-weight: 700;
+}
+
+.sorting-container {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
 /*обертка чтобы элементы встали  в колоку: Сортировка-Кааталог-Пагинация*/
 .catalog-right-column {
   width: 700px;
 }
 
+/* Item  базовая стилизацию для карточек товара*/
+.product-card {
+  background-color: #FFFFFF;
+}
+
+/* Link */
+.product-card-link {
+  text-decoration: none;
+}
+
+/* Title */
+.product-card-title {
+  font-weight: 700;
+  color: #242424;
+}
+
+/* Price */
+.product-card-price {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  color: #814B18;
+  text-transform: uppercase;
+}
+
+/* Link стилизация для пагинации.*/
+.pagination {
+  background-color: #FFFFFF;
+}
+
+.pagination-link {
+  color: #FFFFFF;
+  background-color: #000000;
+  text-decoration: none;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.pagination-current {
+  color: #242424;
+  background-color: #FFFFFF;
+}
+
+.pagination-disabled {
+  background-color: #595959;
+}

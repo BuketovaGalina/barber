@@ -193,6 +193,11 @@
          В противном случае будет отправлен текст подписи.-->
 
         <div class ="sorting-container">
+         <!--Блок сортировки имеет белый фон для выбора сортировки и вида отображения карточек,
+           поэтому добавим обёртку для всех элементов.<div> как раз подходит для бессмысленных оформительских задач. 
+  Бессмысленен он потому, что секции никак не связаны и их нужно просто визуально объединить.
+С именованием класса произошло ровно то же самое. Его имя максимально простое и не описывает ситуацию.
+ Он не отвечает на вопрос «Что делает блок?», а говорит о том, как выглядит блок. Это то, что нам нужно.-->
         <form class="sorting-type">
           <label class="visually-hidden" for="sorting">Сортировка</label>
           <select class="select-control" id="sorting" name="sorting">
@@ -216,11 +221,16 @@
       </div>
 
         <!--Разметим карточки товара-->
+        <!--Обратите внимание: на макете кажется, что изображение должно быть в формате PNG,
+         но мы подключаем JPG. Дело в том, что в макете дизайнер может добавить любой
+          удобный ему формат изображения, а верстальщик должен принять решение,
+           какой формат подходит больше. В жизни такие изображения предоставляет заказчик, а не дизайнер, 
+        и заказчик, скорее всего, пришлёт самый неожиданный вариант. К нему мы и подготовимся.-->
         <ul class="product-list">
            <li class="product-card">
             <!--Картинка и заголовок должны вести на страницу с подробной карточкой товара, так что обернём их в тег <a>.-->
             <a class="product-card-link" href="product.html">
-              <img class="product-card-image" src="" alt="">
+              <img class="product-card-image" src="images/catalog/1.jpg" width="220" height="168" alt="">
               <h3 class="product-card-title">Шампунь для мужчин Brews Daily</h3>
             </a>
             <b class="product-card-price">744 ₽</b>
@@ -228,7 +238,7 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="">
+               <img class="product-card-image" src="images/catalog/2.jpg" width="220" height="168" alt="">
               <h3 class="product-card-title">Syoss шампунь Men Power &amp; Strength</h3>
             </a>
             <b class="product-card-price">160 ₽</b>
@@ -236,7 +246,7 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="">
+              <img class="product-card-image" src="images/catalog/3.jpg" width="220" height="168" alt="">
               <h3 class="product-card-title">Schauma шампунь для мужчин «Сила и объём с хмелем»</h3>
             </a>
             <b class="product-card-price">94 ₽</b>
@@ -244,7 +254,7 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="">
+              <img class="product-card-image" src="images/catalog/4.jpg" width="220" height="168" alt="">
               <h3 class="product-card-title">Nivea Men шампунь-уход «Экстремальная свежесть с ментолом»</h3>
             </a>
             <b class="product-card-price">173 ₽</b>
@@ -252,7 +262,7 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="">
+              <img class="product-card-image" src="images/catalog/5.jpg" width="220" height="168" alt="">
               <h3 class="product-card-title">Шампунь Amplifier Thickening</h3>
             </a>
             <b class="product-card-price">441 ₽</b>
@@ -260,7 +270,7 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-image" src="" alt="">
+              <img class="product-card-image" src="images/catalog/6.jpg" width="220" height="168" alt="">
               <h3 class="product-card-title">American Crew шампунь Anti-Dandruff</h3>
             </a>
             <b class="product-card-price">904 ₽</b>

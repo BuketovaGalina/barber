@@ -12,6 +12,8 @@
 <body>
     <header class = "page-header">
 <nav class = "navigation">
+  <a class="navigation-logo" href="index.html">
+    <img class="page-header-logo" alt="Логотип барбершоп «Бородинский»" src="images/logo.svg" width="140" height="18">
     <ul class = "navigation-list">
 <li class = "navigation-item">
     <a class = "navigation-link" href = "about.html">О нас</a>
@@ -41,7 +43,6 @@
 </nav>
     </header>
     
-
     <main class = "main-container main-index">
       <div class="page-container">
       <!--Главный заголовок-->
@@ -49,7 +50,7 @@
 
         <!--Лого-->
         <img class = "logo" src = "images/logo.svg" wifth = "367" height = "152"
-         alt = "Барбершоп Бородинский">
+         alt = "Барбершоп Бородинский"> 
 
          <!--Преимущества-->
         <section class = "advantages">
@@ -71,6 +72,9 @@
         </section>
      
         <!--Услуги-->
+        <!--Следующие четыре блока — «Услуги», «Фотогалерея», «Контакты» и «Записаться» — имеют светлый фон,
+         но каждый 
+        блок сейчас существует как отдельная секция. Нам нужно их объединить или обернуть в <div>.-->
         <div class="index-columns">
         <section class="services">
             <h2 class="services-title">Популярные услуги</h2>
@@ -100,7 +104,8 @@
             <h2 class = "gallery-title">Фотогалерея</h2>
             <!--Верстка слайдера-->
               <!--Создадим тег <img> для изображения и <button> для кнопок со стрелками-->
-            <img class="slider-image" src = "" alt ="Примеры работ">
+                  <img class="slider-image" src="images/gallery-1.jpg" alt="Примеры работ" 
+                  width="390" height="250">
             <button class="slider-button slider-prev" type="button">
                 <span class="visually-hidden">Предыдущее фото</span>
             </button>
@@ -199,9 +204,10 @@
         <section class="footer-contacts">
           <h2 class="visually-hidden">Контакты</h2>
           <!--Добавим лого-->
-          <img class="footer-contacts-logo" src="" alt="Логотип Барбершоп «Бородинский»">
-
-          <address class="footer-contacts-address">
+              
+    <img class="footer-contacts-logo" src="images/logo-footer.svg" alt="Логотип Барбершоп «Бородинский»"
+    width="187" height="24">
+                   <address class="footer-contacts-address">
             <p class="about-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
             <a class="footer-contacts-address-phone" href="tel:+78005558628">+7 800 555-86-28</a>
           </address>
