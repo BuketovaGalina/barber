@@ -83,7 +83,7 @@ body {
   /* Pages */
     .page-header {
     color: #FFFFFF;
-    background: #ffffff;
+    background: #000000;
   }
   /*color и background всегда идут в паре*/
   
@@ -130,7 +130,7 @@ flex-grow: 1;
   .main-index {
     color: #FFFFFF;
     background-color: #000000;
-    background-image: url("images/index-bg.jpg");
+    background-image: url("images/index-bg.jpg"); /*сд*/
     background-size: 100% auto;
     background-repeat: no-repeat;
   }
@@ -160,7 +160,7 @@ flex-grow: 1;
     margin: 0;
     padding: 0;
     text-align: center;
-    color: #000000;
+    color: #FFFFFF;
   }
 
   .advantages-item {
@@ -173,9 +173,10 @@ flex-grow: 1;
     font-size: 32px;
     line-height: 35px;
     text-transform: uppercase;
+    color: #FFFFFF;
   }
   
-  /* обертка index-columns для общего паттерна на 2 секции*/
+  /* обертка index-columns для общего паттерна на 2 секции - Услуги+Фотогалерея*/
   .index-columns {
     display: flex;
     justify-content: space-between;
